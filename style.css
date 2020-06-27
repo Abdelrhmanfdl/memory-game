@@ -1,0 +1,283 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: rgb(255, 239, 253);
+
+  background-image: url("img/bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 101%;
+}
+
+#header {
+  width: 470px;
+  height: 45px;
+
+  margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  padding: 3px;
+
+  display: flex;
+  justify-content: space-around;
+
+  border: groove 5px rgba(20, 20, 20, 0.582);
+  background-color: rgba(0, 0, 0, 0.466);
+
+  font-size: 25px;
+  font-weight: bolder;
+  font-family: "Neucha";
+  color: white;
+}
+
+#cards-grid {
+  z-index: 1;
+  width: 490px;
+  height: 554px;
+  margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12px;
+  padding-top: 15px;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-bottom: 4px;
+
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  justify-content: space-around;
+}
+
+.general-card {
+  width: 100px;
+  height: 120px;
+
+  border: solid 0px;
+  border-radius: 12%;
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  -webkit-transition: 0.5;
+  -moz-transition: 0.5;
+  -o-transition: 0.5;
+  transition: 0.5s;
+}
+
+.general-card div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.general-front {
+  background-color: rgba(75, 75, 75, 0.363); /* rgba(204, 255, 184, 0.363) */
+  background-image: url("img/Q.png");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  background-position: 10px 15px;
+
+  -webkit-perspective-origin: center;
+  -moz-perspective-origin: center;
+  -o-perspective-origin: center;
+  perspective-origin: center;
+
+  -webkit-transform: perspective(1000px);
+  -moz-transform: perspective(1000px);
+  -o-transform: perspective(1000px);
+  transform: perspective(1000px);
+
+  -webkit-transform: transform 1s;
+  -moz-transform: transform 1s;
+  -o-transform: transform 1s;
+  transition: transform 1s;
+}
+
+.general-front:hover {
+  box-shadow: 5px 5px 20px rgb(255, 255, 255), -5px 5px 20px rgb(255, 255, 255),
+    5px -5px 12px rgb(255, 255, 255), -5px -5px 12px rgb(255, 255, 255);
+  -webkit-animation: front-hover 2s infinite ease-in;
+  -moz-animation: front-hover 2s infinite ease-in;
+  -o-animation: front-hover 2s infinite ease-in;
+  animation: front-hover 2s infinite ease-in;
+}
+
+@-webkit-keyframes front-hover {
+  0% {
+    -webkit-transform: perspective(1000px) translateZ(0px);
+    -moz-transform: perspective(1000px) translateZ(0px);
+    -o-transform: perspective(1000px) translateZ(0px);
+    transform: perspective(1000px) translateZ(0px);
+    background-color: rgba(75, 75, 75, 0.363);
+  }
+  50% {
+    -webkit-transform: perspective(1000px) translateZ(20px);
+    -moz-transform: perspective(1000px) translateZ(20px);
+    -o-transform: perspective(1000px) translateZ(20px);
+    transform: perspective(1000px) translateZ(20px);
+    background-color: rgba(245, 231, 108, 0.801);
+  }
+}
+@-moz-keyframes front-hover {
+  0% {
+    -webkit-transform: perspective(1000px) translateZ(0px);
+    -moz-transform: perspective(1000px) translateZ(0px);
+    -o-transform: perspective(1000px) translateZ(0px);
+    transform: perspective(1000px) translateZ(0px);
+    background-color: rgba(75, 75, 75, 0.363);
+  }
+  50% {
+    -webkit-transform: perspective(1000px) translateZ(20px);
+    -moz-transform: perspective(1000px) translateZ(20px);
+    -o-transform: perspective(1000px) translateZ(20px);
+    transform: perspective(1000px) translateZ(20px);
+    background-color: rgba(245, 231, 108, 0.801);
+  }
+}
+@-o-keyframes front-hover {
+  0% {
+    -webkit-transform: perspective(1000px) translateZ(0px);
+    -moz-transform: perspective(1000px) translateZ(0px);
+    -o-transform: perspective(1000px) translateZ(0px);
+    transform: perspective(1000px) translateZ(0px);
+    background-color: rgba(75, 75, 75, 0.363);
+  }
+  50% {
+    -webkit-transform: perspective(1000px) translateZ(20px);
+    -moz-transform: perspective(1000px) translateZ(20px);
+    -o-transform: perspective(1000px) translateZ(20px);
+    transform: perspective(1000px) translateZ(20px);
+    background-color: rgba(245, 231, 108, 0.801);
+  }
+}
+
+@keyframes front-hover {
+  0% {
+    -webkit-transform: perspective(1000px) translateZ(0px);
+    -moz-transform: perspective(1000px) translateZ(0px);
+    -o-transform: perspective(1000px) translateZ(0px);
+    transform: perspective(1000px) translateZ(0px);
+    background-color: rgba(75, 75, 75, 0.363);
+  }
+  50% {
+    -webkit-transform: perspective(1000px) translateZ(20px);
+    -moz-transform: perspective(1000px) translateZ(20px);
+    -o-transform: perspective(1000px) translateZ(20px);
+    transform: perspective(1000px) translateZ(20px);
+    background-color: rgba(245, 231, 108, 0.801);
+  }
+}
+
+.general-back {
+  background-color: rgb(229, 255, 80);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.type1 {
+  background-image: url("img/2rafiki.png");
+  background-repeat: no-repeat;
+  background-size: 118px 127px;
+  background-position: -10px -4px;
+}
+
+.type2 {
+  background-image: url("img/8.png");
+  background-repeat: no-repeat;
+  background-size: 98px 123px;
+  background-position: 3px -4px;
+  background-color: white;
+}
+
+.type3 {
+  background-image: url("img/littleSimba.png");
+  background-repeat: no-repeat;
+  background-size: 97px 112px;
+  background-position: 3px 2px;
+  background-color: white;
+}
+
+.type4 {
+  background-image: url("img/timon4.png");
+  background-repeat: no-repeat;
+  background-size: 101px 127px;
+  background-position: -1px -4px;
+  background-color: white;
+}
+
+.type5 {
+  background-image: url("img/scar3.png");
+  background-repeat: no-repeat;
+  background-size: 91px 123px;
+  background-position: 6px -4px;
+  background-color: white;
+}
+
+.type6 {
+  background-image: url("img/6zazu.png");
+  background-repeat: no-repeat;
+  background-size: 101px 127px;
+  background-position: -1px -4px;
+  background-color: white;
+}
+
+.type7 {
+  background-image: url("img/nala.png");
+  background-repeat: no-repeat;
+  background-size: 99px 122px;
+  background-position: 2px 1px;
+  background-color: white;
+}
+.type8 {
+  background-image: url("img/7.png");
+  background-repeat: no-repeat;
+  background-size: 95px 113px;
+  background-position: 5px 3px;
+  background-color: white;
+}
+
+.done-card {
+  box-shadow: 5px 5px 20px rgb(253, 251, 110), -5px 5px 20px rgb(206, 206, 100),
+    5px -5px 12px rgb(253, 255, 135), -5px -5px 12px rgb(255, 253, 139);
+}
+
+#above-grid {
+  z-index: 2;
+
+  width: 500px;
+  height: 540px;
+
+  padding-top: 233px;
+  padding-left: 115px;
+
+  position: absolute;
+  left: 424px;
+  top: 77px;
+
+  background-color: rgba(211, 211, 211, 0.473);
+  border-radius: 7%;
+
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+}
