@@ -10,9 +10,11 @@ body {
   margin: 0px;
   background-color: rgb(255, 239, 253);
 
+  overflow: hidden;
+
   background-image: url("img/bg2.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 101%;
+  background-size: cover;
 }
 
 #header {
@@ -40,15 +42,20 @@ body {
 #cards-grid {
   z-index: 1;
   width: 490px;
-  height: 554px;
+  height: 564px;
   margin: 0px;
+  /*
   margin-left: auto;
   margin-right: auto;
+  */
   margin-top: 12px;
   padding-top: 15px;
   padding-left: 17px;
   padding-right: 17px;
-  padding-bottom: 4px;
+  padding-bottom: 10px;
+
+  position: relative;
+  left: 433px;
 
   overflow: hidden;
 
@@ -271,7 +278,7 @@ body {
   padding-left: 115px;
 
   position: absolute;
-  left: 424px;
+  left: 433px;
   top: 77px;
 
   background-color: rgba(211, 211, 211, 0.473);
