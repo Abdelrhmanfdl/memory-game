@@ -10,8 +10,6 @@ body {
   margin: 0px;
   background-color: rgb(255, 239, 253);
 
-  overflow: hidden;
-
   background-image: url("img/bg2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,10 +20,15 @@ body {
   height: 45px;
 
   margin: 0px;
+  /*
   margin-left: auto;
   margin-right: auto;
+  */
   margin-top: 15px;
   padding: 3px;
+
+  position: relative;
+  left: 433px;
 
   display: flex;
   justify-content: space-around;
@@ -278,7 +281,7 @@ body {
   padding-left: 115px;
 
   position: absolute;
-  left: 433px;
+  left: 431px;
   top: 77px;
 
   background-color: rgba(211, 211, 211, 0.473);
